@@ -6,22 +6,26 @@
     src: url($font-src + ".eot");
     src: url($font-src + ".eot?#iefix") format("embedded-opentype"),
       url($font-src + ".woff") format("woff"),
+      url($font-src + ".woff2") format("woff2"),
       url($font-src + ".ttf") format("truetype");
     // , url($font-src + ".woff2") format("woff2")
   }
 }
-
-@include font("Dana", normal, 400, "../fonts/Dana/DanaFaNum");
+@include font("Estedad-Bold", normal, 400, "../fonts/Estedad/Estedad-Bold");
+@include font("Estedad", normal, 400, "../fonts/Estedad/Estedad");
 @include font("Yekan", normal, 400, "../fonts/Yekan/Yekan");
+@include font("Yekan-Bold", normal, bold, "../fonts/Yekan/Yekan");
 
 :root {
-  --font-dana: "Dana";
-  --font-yekan: "Yekan";
-  --color-dark-blue: #101336;
-  --color-red: #ff2d30;
-  --color-black-text: #232f43;
-  --color-green: #02c5bd;
-  --color-white: #ffffff;
+  --font-1: "Yekan";
+  --font-2: "Estedad";
+  --font-3: "Estedad-Bold";
+  --font-4: "Yekan-Bold";
+  --color-1: #101336;
+  --color-2: #ff2d30;
+  --color-3: #232f43;
+  --color-4: #02c5bd;
+  --color-5: #ffffff;
 }
 
 *,
@@ -30,18 +34,28 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: var(--font-dana);
+  font-family: var(--font-1);
 }
 
 body {
   direction: rtl;
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-black-text);
+  color: var(--color-3);
 }
 
 a {
   text-decoration: none;
+  color: var(--color-3);
+  &:hover {
+    color: var(--color-2);
+  }
+  &:active {
+    color: var(--color-2);
+  }
+  &:focus {
+    color: var(--color-2) !important;
+  }
 }
 
 h1,
@@ -50,7 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-dana);
+  font-family: var(--font-3);
   font-weight: 800;
 }
 
@@ -68,20 +82,20 @@ h3 {
 .h-white-20 {
   font-size: 20px;
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-5);
   line-height: 1.7;
 }
 .text-white-14 {
   font-size: 14px;
   font-weight: 400;
-  color: var(--color-white);
+  color: var(--color-5);
   line-height: 1.6;
 }
 
 .tiny-title {
   font-weight: 900;
   font-size: 1.125em;
-  color: var(--color-red);
+  color: var(--color-2);
 }
 .seection-1-title {
   font-size: 1.75em;
@@ -89,19 +103,23 @@ h3 {
 }
 
 .btn-red {
-  padding: 13px, 20px, 10px, 20px;
+  padding: 0 15px;
   font-size: 0.93em;
-  font-family: 800;
-  background-color: var(--color-red);
-  color: var(--color-white);
+  font-family: var(--font-1);
+  background-color: var(--color-2);
+  color: var(--color-5);
   border: 0;
   border-radius: 60px;
-  border: 1.5px solid var(--color-red);
+  border: 1.5px solid var(--color-2);
   transition: all 0.4s ease;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     background-color: unset;
-    border: 1.5px solid var(--color-red);
-    color: var(--color-red);
+    border: 1.5px solid var(--color-2);
+    color: var(--color-2);
   }
 }
 
@@ -116,9 +134,9 @@ h3 {
   border: 1.5px solid #fceebd;
   transition: all 0.4s ease;
   &:hover {
-    background-color: var(--color-white);
-    border: 1.5px solid var(--color-white);
-    color: var(--color-black-text);
+    background-color: var(--color-5);
+    border: 1.5px solid var(--color-5);
+    color: var(--color-3);
   }
 }
 
@@ -131,8 +149,17 @@ h3 {
 .accordion-button::after {
 }
 
+.accordion-cat-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+}
+.accordion-cat-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
+.accordion-cat-button::after {
+}
+
 header {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-1);
   .navbar {
     padding: 20px;
     .navbar-nav {
@@ -140,15 +167,15 @@ header {
         margin-left: 50px;
 
         .nav-link {
-          color: var(--color-white);
+          color: var(--color-5);
           font-size: 1em;
           font-weight: 800;
           transition: all 0.3s ease;
           &.active {
-            color: var(--color-red);
+            color: var(--color-2);
           }
           &:hover {
-            color: var(--color-red);
+            color: var(--color-2);
           }
         }
         .dropdown-menu {
@@ -162,50 +189,119 @@ header {
         }
       }
     }
+
     .category-menu {
-      .nav-item {
-        display: flex;
-        min-width: auto;
-        .nav-link {
-          background-color: var(--color-white);
-          padding: 9px 16px;
-          border-radius: 60px;
+      .nav {
+        .navigation {
+          margin: 0;
+          padding: 0;
+          list-style: none;
         }
-        .dropdown-menu {
-          padding: 16px;
-          width: 100%;
-          .accordion {
-            .accordion-item {
-              border: 0;
-              margin: 10px 0;
-              h2 {
-                .accordion-button {
-                  padding: 0;
-                  display: flex;
-                  justify-content: center;
-                  p {
-                    width: 100%;
-                    text-align: right;
-                    margin: 0;
-                    margin-right: 9px;
-                    font-size: 14px;
-                    font-weight: 500;
-                  }
-                }
+      }
+      .nav {
+        text-align: center;
+        border-radius: 60px;
+        height: 41px;
+        border-radius: 60px;
+
+        .navigation {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 14px;
+          .main-cat {
+            position: relative;
+            float: left;
+          }
+
+          .main-cat {
+            > a {
+              background: var(--color-5);
+              display: inline-block;
+              height: 41px;
+              color: var(--color-1);
+              text-decoration: none;
+              padding: 11px 40px;
+              border-radius: 60px;
+              -webkit-transition: all 0.1s ease-in;
+              -o-transition: all 0.1s ease-in;
+              transition: all 0.1s ease-in;
+              &::before {
+                content: url("../images/svg/menu-humb.svg");
+                position: absolute;
+                right: 10px;
               }
-              .accordion-collapse {
-                ul {
-                  text-align: right;
-                  li {
+              &::after {
+                content: url("../images/svg/arrow-down-cat.svg");
+                position: absolute;
+                max-width: 100%;
+                left: 10px;
+                transition: all 0.2s ease-in;
+              }
+            }
+            // > a:hover {
+            //   &::after {
+
+            //     transform: rotate(180deg)
+
+            //   }
+            // }
+            .sub-cat {
+              display: none;
+              position: absolute;
+              width: 100%;
+              border-radius: 15px;
+              top: calc(100% + 1px);
+              left: -1px;
+              z-index: 1;
+              text-align: left;
+              //cat
+              .accordion {
+                background-color: var(--color-5);
+                border-radius: 15px;
+                padding: 12px;
+                .accordion-item {
+                  border: none;
+
+                  .accordion-button {
+                    padding: 0;
+                    padding: 15px 0;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-family: var(--font-4);
+                  }
+
+                  .accordion-button:not(.collapsed) {
+                    color: var(--color-2);
+                    background-color: unset;
+                    box-shadow: unset;
+                  }
+                  .accordion-button:after {
+                    padding: 10px;
+                    order: 1;
+                    position: absolute;
+                    left: 0;
+                  }
+
+                  .accordion-body {
+                    font-size: 14px;
+                    text-align: justify;
+                    line-height: 22.45px;
+                    font-weight: 400;
+                    color: var(--color-3);
+                    padding: 0;
+
                     a {
-                      width: 100%;
-                      text-align: right;
+                      color: var(--color-2);
+                      margin-bottom: 15px;
                     }
                   }
                 }
               }
             }
           }
+        }
+        li.active {
+          pointer-events: none;
         }
       }
     }
@@ -223,7 +319,7 @@ header {
   // }
 }
 .top-area {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-1);
   min-height: 537px;
   height: 100%;
   .right {
@@ -241,13 +337,13 @@ header {
     align-items: center;
     text-align: center;
     h1 {
-      color: var(--color-white);
+      color: var(--color-5);
       font-weight: bold;
-      line-height: 1.4;
-      font-family: var(--font-dana);
+      line-height: 64px;
+      margin-bottom: 0;
     }
     p {
-      color: var(--color-white);
+      color: var(--color-5);
       font-weight: 800;
       line-height: 31px;
       font-size: 2em;
@@ -260,8 +356,9 @@ header {
   margin: 134px 0 61px 0;
   .right {
     .header {
+      margin-bottom: 40px;
       span {
-        color: var(--color-red);
+        color: var(--color-2);
       }
     }
     .accordion {
@@ -276,10 +373,11 @@ header {
           padding: 15px 0;
           font-size: 20px;
           font-weight: 500;
+          font-family: var(--font-4);
         }
 
         .accordion-button:not(.collapsed) {
-          color: var(--color-red);
+          color: var(--color-2);
           background-color: unset;
           box-shadow: unset;
         }
@@ -287,11 +385,17 @@ header {
           padding: 10px;
           order: -1;
           margin-left: 8px;
-          border: 1px solid var(--color-black-text);
+          border: 1px solid var(--color-3);
           border-radius: 50%;
         }
         .accordion-body {
+          font-size: 14px;
+          text-align: justify;
+          line-height: 22.45px;
+          font-weight: 400;
+          color: var(--color-3);
           padding: 0;
+          padding-bottom: 20px;
         }
       }
     }
@@ -305,13 +409,13 @@ header {
 }
 
 .intro-courses {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-1);
   margin: 200px 0 0 0;
   padding-bottom: 100px;
   .box-title {
     width: 70%;
     height: 200px;
-    background-color: var(--color-green);
+    background-color: var(--color-4);
     margin: auto;
     border-radius: 24px;
     position: relative;
@@ -340,7 +444,7 @@ header {
         width: 70%;
         margin: auto;
         h3 {
-          color: var(--color-white);
+          color: var(--color-5);
           text-align: center;
           height: 100%;
           display: flex;
@@ -361,7 +465,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: var(--color-white);
+    color: var(--color-5);
     position: relative;
     top: -45px;
   }
@@ -383,16 +487,16 @@ header {
           padding: 8px 50px;
         }
         .nav-link.active {
-          color: var(--color-dark-blue);
+          color: var(--color-1);
           font-weight: 800;
           box-shadow: 0px 4px 12px 0px #0000001f;
-          background-color: var(--color-white);
+          background-color: var(--color-5);
         }
       }
     }
     .tab-content {
       .cours-item {
-        background-color: var(--color-white);
+        background-color: var(--color-5);
         width: 100%;
         height: 72px;
         display: flex;
@@ -402,7 +506,7 @@ header {
         border-radius: 36px;
         position: relative;
         transition: all 0.4s ease;
-        color: var(--color-black-text);
+        color: var(--color-3);
         font-weight: 800;
         margin-bottom: 30px;
 
@@ -415,8 +519,8 @@ header {
         }
 
         &:hover {
-          background-color: var(--color-red);
-          color: var(--color-white);
+          background-color: var(--color-2);
+          color: var(--color-5);
           cursor: pointer;
           &::after {
             content: url("../images/svg/arrow-course-white.svg");
@@ -433,7 +537,7 @@ header {
 .collections {
   background-color: #f2fcfd;
   margin-bottom: 167px;
-  padding-top: 80px;
+  padding-top: 120px;
   .row {
     .getting-to-know {
       display: flex;
@@ -449,7 +553,7 @@ header {
       }
 
       span {
-        color: var(--color-red);
+        color: var(--color-2);
         font-size: 18px;
         font-weight: 900;
       }
@@ -492,7 +596,7 @@ header {
           content: "";
           width: 97px;
           height: 13px;
-          background-color: var(--color-red);
+          background-color: var(--color-2);
           position: absolute;
           top: 0;
           border-radius: 0px 0px 12px 12px;
@@ -512,7 +616,7 @@ header {
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 1000;
-          color: var(--color-white);
+          color: var(--color-5);
           opacity: 0;
           transition: all 0.6s ease-in-out;
         }
@@ -541,7 +645,7 @@ header {
   .collections-footer {
     .content {
       height: 202px;
-      background-color: var(--color-dark-blue);
+      background-color: var(--color-1);
       border-radius: 32px;
       border-top-right-radius: 150px;
       position: relative;
@@ -559,9 +663,10 @@ header {
         justify-content: center;
         align-items: center;
         h3 {
-          color: var(--color-white);
+          color: var(--color-5);
           text-align: center;
           padding: 0 0 0 30%;
+          line-height: 51px;
         }
       }
       .vector-box {
@@ -609,7 +714,7 @@ header {
           .title {
             font-size: 14px;
             font-weight: 400;
-            color: var(--color-black-text);
+            color: var(--color-3);
             min-height: 50px;
           }
           .tags {
@@ -623,14 +728,14 @@ header {
         margin-bottom: 12px;
       }
       &:hover {
-        background-color: var(--color-dark-blue);
-        color: var(--color-white);
+        background-color: var(--color-1);
+        color: var(--color-5);
         .content {
           .title {
-            color: var(--color-white);
+            color: var(--color-5);
           }
           .tag-btn-1 {
-            background-color: var(--color-white);
+            background-color: var(--color-5);
           }
         }
       }
@@ -655,27 +760,34 @@ footer {
           content: url("../images/svg/bg-bottom-header.svg");
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
+          z-index: 0;
         }
 
         .text {
           width: 100%;
-          padding: 27px;
-          display: flex;
+          display: inline-flex;
           flex-direction: column;
+          display: inline-flex;
+          padding: 27px;
+          position: relative;
+
           h3 {
-            color: var(--color-white);
+            color: var(--color-5);
             text-align: right;
-            height: 100%;
             display: flex;
             align-items: center;
-            line-height: 1.5;
-            padding-left: 30%;
+            line-height: 51px;
 
+            padding-left: 35%;
+            display: inline-block;
           }
-          a{
-            
+          a {
+            display: inline-flex;
+            width: 170px;
+            font-size: 15px;
+            font-weight: 800;
+            padding: 2px 33px;
+            height: 41px;
           }
         }
         .book-img {
@@ -688,12 +800,12 @@ footer {
     }
   }
   .footer {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-1);
     padding: 150px 0 60px 0;
     .list-footer {
       margin-right: 40px;
       h5 {
-        color: var(--color-white);
+        color: var(--color-5);
         font-size: 18px;
         font-weight: 900;
       }
@@ -703,12 +815,12 @@ footer {
         li {
           margin-bottom: 7px;
           a {
-            color: var(--color-white);
+            color: var(--color-5);
             transition: all 0.2s ease-in;
             font-size: 16px;
             font-weight: 400;
             &:hover {
-              color: var(--color-red);
+              color: var(--color-2);
             }
           }
         }
@@ -722,7 +834,7 @@ footer {
       align-items: center;
       .title {
         text-align: center;
-        color: var(--color-white);
+        color: var(--color-5);
         font-weight: 700;
         font-size: 16px;
         line-height: 2.5;
@@ -755,6 +867,7 @@ footer {
     background-color: transparent;
     outline: none;
     z-index: 91;
+
     &:before {
       width: 40px;
       height: 40px;
@@ -762,8 +875,6 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      padding: 0;
       font-size: 18px;
       -webkit-box-shadow: 0 0 7px 0 rgba(1, 96, 231, 0.2);
       box-shadow: 0 0 7px 0 rgba(1, 96, 231, 0.2);
@@ -776,7 +887,7 @@ footer {
     left: 90px;
     &:before {
       content: url("../images/svg/prev-arrow-blogs.svg");
-      background-color: var(--color-red);
+      background-color: var(--color-2);
       width: 70px;
       height: 44px;
       border-radius: 60px;
@@ -787,7 +898,7 @@ footer {
 
     &:before {
       content: url("../images/svg/next-arrow-blogs.svg");
-      background-color: var(--color-red);
+      background-color: var(--color-2);
       width: 70px;
       height: 44px;
       border-radius: 60px;

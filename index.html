@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <a class="navbar-brand" href="#">
@@ -53,59 +53,73 @@
                         </ul>
                     </div>
                     <div class="category-menu">
-                        <div class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/svg/humber.svg">
-                                همه ی دسته بندی ها
-                                <span class="icon-arrow-down"></span>
-                            </a>
-                            <div class="dropdown-menu category-box-menu" aria-labelledby="navbarScrollingDropdown">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                aria-expanded="false" aria-controls="flush-collapseOne">
-                                                <img src="assets/images/know.png">
-                                                <p>علوم ارتباطات</p>
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <ul class="accordion-body">
-                                                <li><a href="">فلسفه</a></li>
-                                                <li><a href="">فلسفه</a></li>
-                                                <li><a href="">فلسفه</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                                aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                <img src="assets/images/know.png">
-                                                <p>علوم ارتباطات</p>
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <ul class="accordion-body">
-                                                <li><a href="">فلسفه</a></li>
-                                                <li><a href="">فلسفه</a></li>
-                                                <li><a href="">فلسفه</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <nav class="nav">
+                            <div class="navigation">
+                                <div class="main-cat"><a href="javascript:void(0);">همه ی دسته بندی ها <i
+                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="sub-cat">
+                                        <div class="accordion" id="accordionCategoy">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat1"
+                                                        aria-expanded="true" aria-controls="collapseCat1">
+                                                        علوم ارتباطات
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseCat1" class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionCategoy">
+                                                    <div class="accordion-body">
+                                                        <div><a href="#">فلسفه</a></div>
+                                                        <div><a href="#">تاریخ</a></div>
+                                                        <div><a href="#">فلسفه</a></div>
 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat2"
+                                                        aria-expanded="false" aria-controls="collapseCat2">
+                                                        علوم ارتباطات
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseCat2" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCategoy">
+                                                    <div class="accordion-body">
+                                                        <div><a href="#">فلسفه</a></div>
+                                                        <div><a href="#">تاریخ</a></div>
+                                                        <div><a href="#">فلسفه</a></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat3"
+                                                        aria-expanded="false" aria-controls="collapseCat3">
+                                                        علوم ارتباطات
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseCat3" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCategoy">
+                                                    <div class="accordion-body">
+                                                        <div><a href="#">فلسفه</a></div>
+                                                        <div><a href="#">تاریخ</a></div>
+                                                        <div><a href="#">فلسفه</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                        </nav>
                     </div>
-                </div>
-            </nav>
-        </div>
     </header>
     <main>
         <section class="top-area">
@@ -121,7 +135,7 @@
                             <h1>مجموعه رشته های دانشگاهی و تخصصی
                                 با نگاهی تکمیلی، مقایسه ای و انتقادی</h1>
                             <p>Humanities & Sceicnes</p>
-                            <a href="#" class="btn btn-red">محل قرارگیری عنوان</a>
+                            <a href="#" class="btn btn-red ps-4 pe-4">محل قرارگیری عنوان</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +147,7 @@
                     <div class="col-md-7">
                         <div class="right">
                             <div class="header">
-                                <span class="tiny-title mb-1">رویکرد ما</span>
+                                <span class="tiny-title mb-2">رویکرد ما</span>
                                 <h3 class="seection-1-title">در معرفی علوم و تخصص های دانشگاهی چیست؟</h3>
                             </div>
                             <div class="accordion" id="accordionExample">
@@ -540,7 +554,7 @@
         <section class="blogs">
             <div class="container">
                 <div class="header-blog">
-                    <span class="tiny-title mb-1">مقالات منتخب</span>
+                    <span class="tiny-title mb-2">مقالات منتخب</span>
                     <h3 class="seection-1-title">نمایشی از پویایی رشته ها</h3>
                 </div>
                 <!-- Slider main container -->
@@ -663,8 +677,8 @@
                         <h3>دوست داریم بیشتر با مخاطب سایت آشنا شویم.
                             ممنون میشویم اگر با کلیک روی این دکمه
                             به این چند سوال پاسخ دهید
+                            <a class="btn btn-red">مشاهده سوالات</a>
                         </h3>
-                        <a class="btn btn-red">مشاهده سوالات</a>
 
                     </div>
 

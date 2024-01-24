@@ -1,7 +1,18 @@
+
+$(".main-cat").hover(function () {
+    var isHovered = $(this).is(":hover");
+    if (isHovered) {
+        $(this).children(".sub-cat").stop().slideDown(300);
+    } else {
+        $(this).children(".sub-cat").stop().slideUp(300);
+    }
+});
+
+
 $('.slider-blog').slick({
     //dots:true,
     infinite: true,
-    rtl: true,dot:true,
+    rtl: true, dot: true,
 
     slidesToShow: 4,
     slidesToScroll: 1,
