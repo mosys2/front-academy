@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آکادمی | خانه</title>
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/lib/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/lib/owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/lib/all/libraries-min.css" />
+    <link rel="stylesheet" href="assets/lib/animate.css" />
     <link rel="stylesheet" href="assets/css/style-fa.css">
 </head>
 <body>
     <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
+        <section class="fixed-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">
                         <img src="assets/images/logo.png" alt="آکادمی" />
                     </a>
@@ -46,10 +45,30 @@
                                     <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-
-                                <a class="nav-link " aria-current="page" href="#">مقالات</a>
+                            <li class="nav-item dropdown" id="myDropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> مقالات
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط &raquo; </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط &raquo; </a>
+                                                <ul class="submenu dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                    <li><a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                </ul>
                             </li>
+
                         </ul>
                     </div>
                     <div class="category-menu">
@@ -79,12 +98,13 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat2"
-                                                        aria-expanded="false" aria-controls="collapseCat2">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                                        aria-expanded="false" aria-controls="collapse2">
                                                         علوم ارتباطات
                                                     </button>
                                                 </h2>
+
                                                 <div id="collapseCat2" class="accordion-collapse collapse"
                                                     data-bs-parent="#accordionCategoy">
                                                     <div class="accordion-body">
@@ -97,9 +117,9 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat3"
-                                                        aria-expanded="false" aria-controls="collapseCat3">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                        aria-expanded="false" aria-controls="collapse3">
                                                         علوم ارتباطات
                                                     </button>
                                                 </h2>
@@ -120,6 +140,11 @@
                                 </div>
                         </nav>
                     </div>
+                </nav>
+
+
+            </div>
+        </section>
     </header>
     <main>
         <section class="top-area">
@@ -127,11 +152,76 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="right">
-                            <img src="assets/images/desk.png" alt="">
+                            <div class="content-wrapper">
+                                <div class="index-banner">
+                                    <div class="index-banner__wrapper">
+                                        <span class="text wow fadeInUp main" data-wow-duration="1s">علوم تربیتی</span>
+                                        <!-- <span class="text wow fadeInUp main" data-wow-duration="2s">Social Science</span> -->
+
+                                        <div class="text-wrapper wow fadeInUp" id="text-wrapper-0"
+                                            data-wow-duration="2s">
+                                            <div class="text active" id="text-1">
+                                                علوم اجتماعی </div>
+                                            <div class="text " id="text-2">
+                                                سرمایه اجتماعی </div>
+                                            <div class="text " id="text-3">
+                                                تفکر اجتماعی </div>
+                                            <div class="text " id="text-4">
+                                                علوم ارتباط </div>
+                                        </div>
+                                        <div class="text-wrapper wow fadeInUp" id="text-wrapper-1"
+                                            data-wow-duration="1s">
+                                            <div class="text active" id="text-1">
+                                                فدرت اجتماعی </div>
+                                            <div class="text " id="text-2">
+                                                روانشناسی اجتماعی </div>
+                                            <div class="text " id="text-3">
+                                                شناحت اجتماعی </div>
+                                            <div class="text " id="text-4">
+                                                مددکاری اجتماعی </div>
+                                        </div>
+                                        <div class="text-wrapper wow fadeInUp" id="text-wrapper-2"
+                                            data-wow-duration="1s">
+                                            <div class="text active" id="text-1">
+                                                قدرت اجتماعی </div>
+                                            <div class="text " id="text-2">
+                                                اجتماعی </div>
+                                            <div class="text " id="text-3">
+                                                علوم اجتماعی </div>
+                                            <div class="text " id="text-4">
+                                                جامعه مدنی </div>
+                                        </div>
+                                        <div class="text-wrapper wow fadeInUp" id="text-wrapper-3"
+                                            data-wow-duration="2s">
+                                            <div class="text active" id="text-1">
+                                                قدرت احتماعی </div>
+                                            <div class="text " id="text-2">
+                                                جتماعی </div>
+                                            <div class="text " id="text-3">
+                                                قدرت اجتماعی </div>
+                                            <div class="text " id="text-4">
+                                                تفکر مدیریتی </div>
+                                        </div>
+                                        <div class="text-wrapper wow fadeInUp" id="text-wrapper-4"
+                                            data-wow-duration="4s">
+                                            <div class="text active" id="text-1">
+                                                علوم </div>
+                                            <div class="text " id="text-2">
+                                                قدرت </div>
+                                            <div class="text " id="text-3">
+                                                سیاست </div>
+                                            <div class="text " id="text-4">
+                                                سرمایه اجتماعی </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="left">
+                        <div class="left  wow slideInLeft">
                             <h1>مجموعه رشته های دانشگاهی و تخصصی
                                 با نگاهی تکمیلی، مقایسه ای و انتقادی</h1>
                             <p>Humanities & Sceicnes</p>
@@ -143,7 +233,7 @@
         </section>
         <section class="introduction">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeInUp">
                     <div class="col-md-7">
                         <div class="right">
                             <div class="header">
@@ -262,7 +352,8 @@
                     </nav>
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="tab-pane fade active show" id="nav-1" role="tabpanel" aria-labelledby="nav-1-tab">
-                            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                            <div
+                                class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 wow fadeInUp">
                                 <div class="col">
                                     <a class="cours-item">
                                         جامعه شناسی
@@ -311,7 +402,8 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
-                            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                            <div
+                                class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5  wow fadeInUp">
                                 <div class="col">
                                     <a class="cours-item">
                                         جامعه شناسی
@@ -360,7 +452,8 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
-                            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                            <div
+                                class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 wow fadeInUp">
                                 <div class="col">
                                     <a class="cours-item">
                                         جامعه شناسی
@@ -409,7 +502,8 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab">
-                            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                            <div
+                                class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 wow fadeInUp ">
                                 <div class="col">
                                     <a class="cours-item">
                                         جامعه شناسی
@@ -466,7 +560,7 @@
             <div class="container">
                 <div class="row" style="flex-direction: row-reverse;">
                     <!-- Dont Remove -->
-                    <div class="col-md-3">
+                    <div class="col-md-3  wow slideInLeft">
                         <div class="getting-to-know">
                             <span class="tiny-title">ارائه مجموعه ها</span>
                             <h4 class="seection-1-title">آشنایی با رشته ها</h4>
@@ -474,7 +568,7 @@
                     </div>
                     <!-- Dont Remove -->
 
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <!-- <div class="top-coll"><img src="assets/images/svg/top-coll.svg"></div> -->
                             <div class="image-box">
@@ -485,7 +579,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -495,7 +589,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -505,7 +599,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -515,7 +609,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -525,7 +619,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -537,7 +631,7 @@
                     </div>
 
                 </div>
-                <div class="collections-footer">
+                <div class="collections-footer wow fadeInUp">
                     <div class="content">
                         <div class="vector-box">
                             <img src="assets/images/svg/student-top-star.svg">
@@ -670,7 +764,7 @@
     </main>
     <footer>
         <!-- if you want, remov it in other pages -->
-        <div class="questions">
+        <div class="questions wow fadeInDown">
             <div class="box-title">
                 <div class="content">
                     <div class="text">
@@ -690,7 +784,7 @@
         </div>
         <!-- end -->
 
-        <section class="footer">
+        <section class="footer wow fadeInUp">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -756,8 +850,8 @@
     </footer>
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/lib/owl/owl.carousel.min.js"></script>
     <script src="assets/lib/all/libraries-min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 
