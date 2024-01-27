@@ -1,4 +1,4 @@
-$( function (){
+$(function () {
 
     // mobile device check
     window.mobileAndTabletCheck = function () {
@@ -14,36 +14,36 @@ $( function (){
     $('[data-bs-toggle="tooltip"]').tooltip()
 
     // header on mobile add fixed class
-    if ( $(window).innerWidth() < 992 ) {
+    if ($(window).innerWidth() < 992) {
         const headerHeight = $('#main-header').innerHeight()
 
         $('main').css('marginTop', headerHeight)
 
         $(window).on('scroll', function () {
             const scrollTop = $(this).scrollTop()
-            if ( scrollTop > 15 ) {
+            if (scrollTop > 15) {
                 $('#main-header').addClass('fixed')
-            }  else {
+            } else {
                 $('#main-header').removeClass('fixed')
             }
         })
     }
 
     $('.nav-trigger').click(function () {
-        if ( !$('.sidebar-accordion').hasClass('active') ) {
+        if (!$('.sidebar-accordion').hasClass('active')) {
             $('.sidebar-accordion').addClass('active')
         }
     })
 
     $('.sidebar-accordion__close').click(function () {
-        if ( $(this).parent().hasClass('active') ) {
+        if ($(this).parent().hasClass('active')) {
             $(this).parent().removeClass('active')
         }
     })
 
     // header setup
     $('.svg-trigger').click(function () {
-        if ( !$('.primary-menu .menu-container').is(':visible') ) {
+        if (!$('.primary-menu .menu-container').is(':visible')) {
             $('.primary-menu').addClass('active')
         } else {
             $('.primary-menu').removeClass('active')
@@ -51,7 +51,7 @@ $( function (){
     })
 
     // index banner
-    if ( $('.index-banner').length ) {
+    if ($('.index-banner').length) {
         const indexBannerTime = 3000
         const textWrapperLength = $('.index-banner .text-wrapper').length
         let activeLength = 1
@@ -68,7 +68,7 @@ $( function (){
         // }, indexBannerTime)
     }
 
-    if ( $('.index-timeline').length ) {
+    if ($('.index-timeline').length) {
         $('.indexTimelineSlider').owlCarousel({
             rtl: true,
             items: 1,
@@ -82,7 +82,7 @@ $( function (){
                 "<span class='icon icon-angle-left'></span>"
             ],
         })
-        $('.indexTimelineSlider .owl-dot').on('click', function() {
+        $('.indexTimelineSlider .owl-dot').on('click', function () {
             $('.indexTimelineSlider').trigger('to.owl.carousel', [$(this).index(), 300]);
             $('.owl-dot').removeClass('active');
             $(this).addClass('active');
@@ -94,11 +94,11 @@ $( function (){
         // })
     }
 
-    if ( $(window).innerWidth() < 992 ) {
+    if ($(window).innerWidth() < 992) {
         $('.sidebar-accordion').detach().appendTo('.content-wrapper')
     }
 
-    if ( $('.subAboutUsSlider').length ) {
+    if ($('.subAboutUsSlider').length) {
         const mySlider = new Swiper('.subAboutUsSlider', {
             loop: true,
             slidesPerView: 1,
@@ -125,24 +125,24 @@ $( function (){
             }
         });
 
-        if ( $(window).innerWidth() < 768 ) {
+        if ($(window).innerWidth() < 768) {
             setFirstSwiperAnimationMobile()
-        } else if ( $(window).innerWidth() < 1400 ) {
+        } else if ($(window).innerWidth() < 1400) {
             setFirstSwiperAnimationTablet()
         } else {
             setFirstSwiperAnimationDesktop()
         }
 
         mySlider.forEach(slider => {
-            if ( $(window).innerWidth() < 768 ) {
+            if ($(window).innerWidth() < 768) {
                 slider.on('slideChange', function () {
                     setSwiperAnimationMobile()
                 })
-            } else if ( $(window).innerWidth() < 1400 ) {
+            } else if ($(window).innerWidth() < 1400) {
                 slider.on('slideChange', function () {
                     setSwiperAnimationTablet()
                 })
-            }  else {
+            } else {
                 slider.on('slideChange', function () {
                     setSwiperAnimationDesktop()
                 })
@@ -186,7 +186,7 @@ $( function (){
     }
 
     // index testimonials sliders
-    if ( $('.index-testimonials').length ) {
+    if ($('.index-testimonials').length) {
         const slider1 = new Swiper('.index-testimonials__text-slider', {
             loop: true,
             slidesPerView: 1,
@@ -286,7 +286,7 @@ $( function (){
     }
 
     // index accordion setup
-    if ( $('.index-accordion').length ) {
+    if ($('.index-accordion').length) {
         const itemLength = $('.index-accordion__item').length
         const activeHeight = $('.index-accordion__content.active').innerHeight()
         $('.index-accordion__content-wrapper').css('height', activeHeight)
@@ -304,7 +304,7 @@ $( function (){
             setTimeout(() => {
                 $(window).scrollTop($(this).offset().top - 150)
             }, 500)
-            if ( !$(this).hasClass('show') ) {
+            if (!$(this).hasClass('show')) {
                 $('.index-accordion__item.show')
                     .children('.content').css('height', 0)
                 $('.index-accordion__item.show')
@@ -322,15 +322,15 @@ $( function (){
                 $(`.index-accordion__content[data-count=${count}]`).addClass('active')
                 $('.index-accordion__content-wrapper').css('height', height)
 
-                if ( $(this).index() === itemLength ) {
-                    if ( $('.index-accordion__wrapper .line').hasClass('active') ) {
+                if ($(this).index() === itemLength) {
+                    if ($('.index-accordion__wrapper .line').hasClass('active')) {
                         $('.index-accordion__wrapper .line').removeClass('active')
                     }
                     let time = 0
                     const interval = setInterval(() => {
                         $('.index-accordion__wrapper .line').css('height', $(this).position().top)
                         time += 1
-                        if ( time >= 100 ) {
+                        if (time >= 100) {
                             clearInterval(interval)
                             $('.index-accordion__wrapper .line').addClass('active')
                         }
@@ -341,7 +341,7 @@ $( function (){
                     })
                 }
             }
-            if ( $(window).innerWidth() < 992 ) {
+            if ($(window).innerWidth() < 992) {
                 setTimeout(() => {
                     $(window).scrollTop($(this).offset().top - 100)
                 }, 350)
@@ -350,11 +350,11 @@ $( function (){
     }
 
     // index trend setup
-    if ( $('.index-trend').length ) {
+    if ($('.index-trend').length) {
         setTimeout(() => {
             const activeHeight = $('.index-trend__content.active').innerHeight()
             const siblingsHeight = $('.index-trend__badge-wrapper').innerHeight()
-            if ( $(window).innerWidth() < 992 ) {
+            if ($(window).innerWidth() < 992) {
                 $('.index-trend__wrapper').css('height', activeHeight + siblingsHeight + 20)
             } else {
                 $('.index-trend__content-wrapper').css('height', activeHeight)
@@ -365,14 +365,14 @@ $( function (){
         }, 10)
 
         $('.index-trend__badge').click(function () {
-            if ( !$(this).hasClass('show') ) {
+            if (!$(this).hasClass('show')) {
                 const count = $(this).data('count')
                 $('.index-trend__badge.show').removeClass('show')
                 $(this).addClass('show')
 
                 const target = $(`.index-trend__content[data-count=${count}]`)
                 const height = target.innerHeight()
-                if ( $(window).innerWidth() < 992 ) {
+                if ($(window).innerWidth() < 992) {
                     $('.index-trend__wrapper').css('height', height + siblingsHeight + 20)
                 } else {
                     $('.index-trend__content-wrapper').css('height', height)
@@ -382,7 +382,7 @@ $( function (){
             }
         })
         $('.index-trend__content .nav-link').click(function () {
-            if ( $(window).innerWidth() < 992 ) {
+            if ($(window).innerWidth() < 992) {
                 setTimeout(() => {
                     $(window).scrollTop($(this).offset().top - 80)
                 }, 350)
@@ -391,7 +391,7 @@ $( function (){
     }
 
     // index wow initialize
-    if ( $('.wow').length ) {
+    if ($('.wow').length) {
         const wow = new WOW({
             mobile: false
         })
@@ -432,7 +432,7 @@ $( function (){
     }*/
 
     // page books slider setup
-    if ( $('.page-books').length ) {
+    if ($('.page-books').length) {
         $('.page-books-slider').owlCarousel({
             rtl: true,
             items: 1,
@@ -462,16 +462,16 @@ $( function (){
 
 function activeWrapper(length, max) {
     for (let i = 0; i < 3; i++) {
-        if ( length > max ) {
+        if (length > max) {
             length = 1
         }
         const wrapper = $(`.index-banner .text-wrapper:nth-of-type(${length})`)
         let activeLength = wrapper.children('.text.active').index() + 1
-        if ( activeLength === 4 ) {
+        if (activeLength === 4) {
             activeLength = 1
         }
         wrapper.children('.text.active').removeClass('active')
-        wrapper.children(`.text:nth-of-type(${activeLength+1})`).addClass('active')
+        wrapper.children(`.text:nth-of-type(${activeLength + 1})`).addClass('active')
         length++;
     }
     return length;
@@ -484,11 +484,11 @@ function setActiveIndexBanner() {
     let arr = []
 
     for (let i = 0; i < activeLength; i++) {
-        const random = Math.floor( Math.random() * itemLength) + 1;
-        if( arr.includes(random) == true){
-            i=i-1;
-        }else{
-            if(random > itemLength == false){
+        const random = Math.floor(Math.random() * itemLength) + 1;
+        if (arr.includes(random) == true) {
+            i = i - 1;
+        } else {
+            if (random > itemLength == false) {
                 arr.push(random);
             }
         }

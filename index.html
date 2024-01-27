@@ -10,18 +10,41 @@
     <link rel="stylesheet" href="assets/css/style-fa.css">
 </head>
 <body>
+    <nav class="sidebar">
+
+        <ul>
+            <div class="close-menu"></div>
+            <div class="menu">
+                <img src="assets/images/logo.png">
+            </div>
+            <li class="active"><a href="#">خانه</a></li>
+            <li>
+                <a href="#" class="feat-btn">مجموعه ها
+                    <span class="fas fa-caret-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">علوم ارتباطات</a></li>
+                    <li><a href="#">علوم ارتباطات</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">رشته ها</a></li>
+            <li><a href="#">درباره سایت</a></li>
+            <li><a href="#">مقالات</a></li>
+        </ul>
+    </nav>
+
     <header>
         <section class="fixed-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="mobile-menu hamber" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <a class="navbar-brand" href="#">
                         <img src="assets/images/logo.png" alt="آکادمی" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <ul class="navbar-nav m-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                             <li class="nav-item">
@@ -145,6 +168,8 @@
 
             </div>
         </section>
+
+
     </header>
     <main>
         <section class="top-area">
@@ -783,7 +808,6 @@
             </div>
         </div>
         <!-- end -->
-
         <section class="footer wow fadeInUp">
             <div class="container">
                 <div class="row">
@@ -801,7 +825,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-6 col-md-2">
                         <div class="list-footer">
                             <h5>لیست رشته ها</h4>
                                 <ul>
@@ -813,7 +837,7 @@
                                 </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-6 col-md-2">
                         <div class="list-footer">
                             <h5>درباره سایت</h4>
                                 <ul>
