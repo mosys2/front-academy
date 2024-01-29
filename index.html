@@ -6,10 +6,13 @@
     <title>آکادمی | خانه</title>
     <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/lib/all/libraries-min.css" />
-    <link rel="stylesheet" href="assets/lib/animate.css" />
+    <link rel="stylesheet" href="assets/lib/animate/animate.css" />
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.css" />
     <link rel="stylesheet" href="assets/css/style-fa.css">
+
 </head>
 <body>
+    <!-- Mobile Side menu -->
     <nav class="sidebar">
         <ul>
             <div class="close-menu"></div>
@@ -19,7 +22,7 @@
             <li class="active"><a href="#">خانه</a></li>
             <li>
                 <a href="#" class="feat-btn">مجموعه ها
-                    <span class="fas fa-caret-down first"></span>
+                    <span class="fas fa-angle-down first"></span>
                 </a>
                 <ul class="feat-show">
                     <li><a href="#">علوم ارتباطات</a></li>
@@ -32,10 +35,11 @@
             <li><a href="#">مقالات</a></li>
         </ul>
     </nav>
-
+    <!-- End -->
     <header>
         <section class="fixed-nav">
             <div class="container">
+                <!-- Desktop Menu -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <button class="mobile-menu hamber" type="button">
                         <span class="navbar-toggler-icon"></span>
@@ -59,7 +63,7 @@
                                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     مجموعه ها
-                                    <span class="icon-arrow-down"></span>
+                                    <span class="fas fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                     <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
@@ -68,15 +72,18 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown" id="myDropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> مقالات
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown"> مقالات
+                                    <span class="fas fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li> <a class="dropdown-item" href="#"> علوم ارتباط </a></li>
-                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط &raquo; </a>
+                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط <span
+                                                class="fas fa-angle-left"></span></a>
                                         <ul class="submenu dropdown-menu">
                                             <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
                                             <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
-                                            <li><a class="dropdown-item" href="#">علوم ارتباط &raquo; </a>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط <span
+                                                        class="fas fa-angle-left"></span> </a>
                                                 <ul class="submenu dropdown-menu">
                                                     <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
                                                     <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
@@ -96,20 +103,19 @@
                     <div class="category-menu">
                         <nav class="nav">
                             <div class="navigation">
-                                <div class="main-cat"><a href="javascript:void(0);">همه ی دسته بندی ها <i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <div class="main-cat"><a href="javascript:void(0);">همه ی دسته بندی ها </a>
                                     <div class="sub-cat">
-                                        <div class="accordion" id="accordionCategoy">
+
+                                        <div class="accordion" id="accordionCat">
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header">
                                                     <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseCat1"
-                                                        aria-expanded="true" aria-controls="collapseCat1">
-                                                        علوم ارتباطات
-                                                    </button>
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                                        aria-expanded="true" aria-controls="collapse1">
+                                                        علوم ارتباطات </button>
                                                 </h2>
-                                                <div id="collapseCat1" class="accordion-collapse collapse show"
-                                                    data-bs-parent="#accordionCategoy">
+                                                <div id="collapse1" class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionCat">
                                                     <div class="accordion-body">
                                                         <div><a href="#">فلسفه</a></div>
                                                         <div><a href="#">تاریخ</a></div>
@@ -123,12 +129,10 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapse2"
                                                         aria-expanded="false" aria-controls="collapse2">
-                                                        علوم ارتباطات
-                                                    </button>
+                                                        علوم ارتباطات </button>
                                                 </h2>
-
-                                                <div id="collapseCat2" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionCategoy">
+                                                <div id="collapse2" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCat">
                                                     <div class="accordion-body">
                                                         <div><a href="#">فلسفه</a></div>
                                                         <div><a href="#">تاریخ</a></div>
@@ -142,27 +146,25 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapse3"
                                                         aria-expanded="false" aria-controls="collapse3">
-                                                        علوم ارتباطات
-                                                    </button>
+                                                        علوم ارتباطات </button>
                                                 </h2>
-                                                <div id="collapseCat3" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionCategoy">
+                                                <div id="collapse3" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCat">
                                                     <div class="accordion-body">
                                                         <div><a href="#">فلسفه</a></div>
                                                         <div><a href="#">تاریخ</a></div>
                                                         <div><a href="#">فلسفه</a></div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </ul>
-                                        </li>
-                                        </ul>
                                     </div>
                                 </div>
                         </nav>
                     </div>
                 </nav>
+                <!-- End -->
             </div>
         </section>
     </header>
@@ -170,7 +172,7 @@
         <section class="top-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12 col-lg-6">
                         <div class="right">
                             <div class="content-wrapper">
                                 <div class="index-banner">
@@ -240,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="co-md-12 col-lg-6">
                         <div class="left  wow slideInLeft">
                             <h1>مجموعه رشته های دانشگاهی و تخصصی
                                 با نگاهی تکمیلی، مقایسه ای و انتقادی</h1>
@@ -254,7 +256,7 @@
         <section class="introduction">
             <div class="container">
                 <div class="row wow fadeInUp">
-                    <div class="col-md-7">
+                    <div class="col-md-12 col-xl-7">
                         <div class="right">
                             <div class="header">
                                 <span class="tiny-title mb-2">رویکرد ما</span>
@@ -322,7 +324,7 @@
 
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-12 col-xl-5">
                         <div class="left">
                             <img src="assets/images/intru.png">
                         </div>
@@ -586,7 +588,7 @@
                 </div>
                 <div class="row row-collections">
                     <!-- Dont Remove -->
-                    <div class="col-md-3  wow slideInLeft">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 collection-box  wow slideInLeft">
                         <div class="getting-to-know">
                             <span class="tiny-title">ارائه مجموعه ها</span>
                             <h4 class="seection-1-title">آشنایی با رشته ها</h4>
@@ -594,7 +596,7 @@
                     </div>
                     <!-- Dont Remove -->
 
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
                             <!-- <div class="top-coll"><img src="assets/images/svg/top-coll.svg"></div> -->
                             <div class="image-box">
@@ -605,7 +607,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box  wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -615,7 +617,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -625,7 +627,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -635,7 +637,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -645,7 +647,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
                             <div class="image-box">
                                 <a href="#">
@@ -809,6 +811,7 @@
                         <h3>دوست داریم بیشتر با مخاطب سایت آشنا شویم.
                             ممنون میشویم اگر با کلیک روی این دکمه
                             به این چند سوال پاسخ دهید
+
                             <a class="btn btn-red">مشاهده سوالات</a>
                         </h3>
 
@@ -824,7 +827,7 @@
         <section class="footer wow fadeInUp">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-8 col-xl-4">
                         <div class="about">
                             <h3 class="h-white-20">
                                 مرجع معرفی
@@ -838,7 +841,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
+                    <div class="col-6 col-md-4 col-xl-2">
                         <div class="list-footer">
                             <h5>لیست رشته ها</h4>
                                 <ul>
@@ -850,7 +853,7 @@
                                 </ul>
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
+                    <div class="col-6 col-md-4 col-xl-2">
                         <div class="list-footer">
                             <h5>درباره سایت</h4>
                                 <ul>
@@ -862,7 +865,7 @@
                                 </ul>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-md-8 col-xl-4">
                         <div class="newsleter">
                             <div class="title">
                                 جهت دریافت آخرین به روز رسانی و مطالب
