@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی | فیلتر</title>
+    <link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/all/libraries-min.css" />
+    <link rel="stylesheet" href="assets/lib/animate/animate.css" />
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style-fa.css">
+
+</head>
+<body>
+
+    <!-- Mobile Side menu -->
+    <nav class="sidebar">
+        <ul>
+            <div class="close-menu"></div>
+            <div class="menu">
+                <img src="assets/images/logo.png">
+            </div>
+            <li class="active"><a href="#">خانه</a></li>
+            <li>
+                <a href="#" class="feat-btn">مجموعه ها
+                    <span class="fas fa-angle-down first"></span>
+                </a>
+                <ul class="feat-show">
+                    <li><a href="#">علوم ارتباطات</a></li>
+                    <li><a href="#">علوم ارتباطات</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">رشته ها</a></li>
+            <li><a href="#">درباره سایت</a></li>
+            <li><a href="#">مقالات</a></li>
+        </ul>
+    </nav>
+    <!-- End -->
+    <header>
+        <section class="fixed-nav">
+            <div class="container">
+                <!-- Desktop Menu -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="mobile-menu hamber" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.png" alt="آکادمی" />
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav m-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">رشته ها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">درباره سایت</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    مجموعه ها
+                                    <span class="fas fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown" id="myDropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown"> مقالات
+                                    <span class="fas fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                    <li> <a class="dropdown-item" href="#"> علوم ارتباط <span
+                                                class="fas fa-angle-left"></span></a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط <span
+                                                        class="fas fa-angle-left"></span> </a>
+                                                <ul class="submenu dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                                    <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                            <li><a class="dropdown-item" href="#">علوم ارتباط</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                    <li><a class="dropdown-item" href="#"> علوم ارتباط </a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="category-menu">
+                        <nav class="nav">
+                            <div class="navigation">
+                                <div class="main-cat"><a href="#">همه ی دسته بندی ها </a>
+                                    <div class="sub-cat">
+
+                                        <div class="accordion" id="accordionCat">
+
+                                            <ul id="myUL">
+                                                <li class="root active"><span class="caret caret-down">علوم
+                                                        ارتباطات</span>
+                                                    <ul class="nested active" style="display: block;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">تاریخ </span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="root"><span class="caret">علوم ارتباطات</span>
+                                                    <ul class="nested" style="display: none;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">Tea</span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="root"><span class="caret">علوم ارتباطات</span>
+                                                    <ul class="nested" style="display: none;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">Tea</span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </nav>
+
+                    </div>
+                </nav>
+                <!-- End -->
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="section-top-full">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content">
+                            <h1>مجموعه ای ار بیش از صد رشته متنوع در حوزه های مختلف علوم</h1>
+                            <p>تلاشی در راستای معرفی نظام مند با تاکید بر تنوع دیدگاه ها</p>
+                            <form action="#" class="row align-items-center justify-content-center">
+                                <div class="col-lg-5">
+                                    <select class="form-control " name="field"
+                                        placeholder="رشته مورد نظر خود را انتخاب کنید">
+                                        <option value="1">فیزیک</option>
+                                        <option value="2">ریاضی</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-5 pe-0">
+                                    <input class="form-control " name="text"
+                                        placeholder="مطلب خود را جست و جو نمایید" />
+
+                                </div>
+                                <div class="col-lg-2">
+                                    <button class="btn btn-red" type="submit">جستجو</button>
+                                </div>
+                            </form>
+                            <div class="tags">
+                                <h5>کلید واژه های منتخب:</h5>
+                                <span><a href="#" class="active">#علوم اقتصادی</a></span>
+                                <span><a href="#">#علم سنجی</a></span>
+                                <span><a href="#">#روش کیفی</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" mt-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="filter-box">
+                            <div class="row filter">
+                                <div class="col-lg-6 right">
+                                    <div class="btn-modal">
+                                        <button class="btn btn-green">فیلترها</button>
+                                    </div>
+                                    <div class="cat-btn-modal">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 left">
+                                    <div class="sorted">
+                                        <span>15 دوره پیدا شد</span>
+                                    </div>
+                                    <div class="sort">
+                                        <span>مرتب سازی:</span>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected value="1">جدیدترین</option>
+                                            <option value="2">صعودی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="row">
+                                    <div class="col-lg-5 type-item">
+                                        <span>نوع مطلب:</span>
+                                        <span class="close">تحلیلی
+                                            <a href="#">
+                                                <span class="fas fa-times"></span>
+                                            </a>
+                                        </span>
+                                        <span class="close">توصیفی
+                                            <a href="#">
+                                                <span class="fas fa-times"></span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-7 type-item">
+                                        <span>نوع مطلب:</span>
+                                        <span class="close">جامعه شناسی
+                                            <a href="#">
+                                                <span class="fas fa-times"></span>
+                                            </a>
+                                        </span>
+                                        <span class="close">روانشناسی
+                                            <a href="#">
+                                                <span class="fas fa-times"></span>
+                                            </a>
+                                        </span>
+                                        <span class="close">روانشناسی
+                                            <a href="#">
+                                                <span class="fas fa-times"></span>
+                                            </a>
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-box">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="category">
+                                            <img src="assets/images/fluent-mdl2_education.png">
+                                            <span class="span ms-1">اقتصاد</span>
+                                        </div>
+                                        <article class="article-blog">
+                                            <figure>
+                                                <a href="#" title="">
+                                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                                </a>
+                                            </figure>
+                                            <div class="content"><a href="#" title="">
+                                                    <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟
+                                                    </h4>
+                                                </a>
+                                                <div class="tags">
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <!-- paginate -->
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination flex-wrap justify-content-center">
+                                                <li>
+                                                    <a href="#" class="previous" aria-label="Previous">
+                                                        <span class="fas fa-angle-right"></span>
+                                                    </a>
+                                                </li>
+                                                <li><a class="active" href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" class="next active" aria-label="Next">
+                                                        <span class="fas fa-angle-left"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- paginate -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="cat-image">
+                            <div class="cat-image-title">
+                                دسته بندی ها
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/cat-image.png" alt="">
+                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/cat-image.png" alt="">
+                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/cat-image.png" alt="">
+                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/cat-image.png" alt="">
+                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/cat-image.png" alt="">
+                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- if you want, remov it in other pages -->
+        <div class="questions wow fadeInDown">
+            <div class="box-title">
+                <div class="content">
+                    <div class="text">
+                        <h3>دوست داریم بیشتر با مخاطب سایت آشنا شویم.
+                            ممنون میشویم اگر با کلیک روی این دکمه
+                            به این چند سوال پاسخ دهید
+
+                            <a class="btn btn-red">مشاهده سوالات</a>
+                        </h3>
+
+                    </div>
+
+                    <div class="book-img">
+                        <img src="assets/images/svg/tourist-reading-book.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+        <section class="footer wow fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8 col-xl-4">
+                        <div class="about">
+                            <h3 class="h-white-20">
+                                مرجع معرفی
+                                <br>
+                                رشته های علمی تخصصی دانشگاهی
+                            </h3>
+                            <p class="text-white-14 mt-3">
+                                گردآوری منابع تخصصی در مجموعه ای ازرشته ها به صورت یک جا، هدفی است که در اینسایت به
+                                دنبال
+                                تحقق آن هستیم
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <div class="list-footer">
+                            <h5>لیست رشته ها</h4>
+                                <ul>
+                                    <li><a href="#">علوم طبیعی</a></li>
+                                    <li><a href="#">علوم انسانی</a></li>
+                                    <li><a href="#">هنر و ادبیات</a></li>
+                                    <li><a href="#">فنی و مهندسی</a></li>
+
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <div class="list-footer">
+                            <h5>درباره سایت</h4>
+                                <ul>
+                                    <li><a href="#">اهداف</a></li>
+                                    <li><a href="#">رویکردها</a></li>
+                                    <li><a href="#">چشم انداز</a></li>
+                                    <li><a href="#">حمایت از ما</a></li>
+
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-xl-4">
+                        <div class="newsleter">
+                            <div class="title">
+                                جهت دریافت آخرین به روز رسانی و مطالب
+                                جدید سایت، ایمیل خود را وارد کنید
+                            </div>
+                            <div class="form-box">
+                                <form action="#" class="row">
+                                    <div class="col-auto pe-0">
+                                        <input type="text" class="form-control " name="email"
+                                            placeholder="ایمیل خود را وارد کنید">
+                                    </div>
+                                    <div class="col-auto ps-1">
+                                        <button class="btn btn-red" type="submit">تایید</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/all/libraries-min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

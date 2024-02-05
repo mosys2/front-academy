@@ -12,6 +12,7 @@
 
 </head>
 <body>
+
     <!-- Mobile Side menu -->
     <nav class="sidebar">
         <ul>
@@ -100,68 +101,61 @@
 
                         </ul>
                     </div>
+
                     <div class="category-menu">
                         <nav class="nav">
                             <div class="navigation">
-                                <div class="main-cat"><a href="javascript:void(0);">همه ی دسته بندی ها </a>
+                                <div class="main-cat"><a href="#">همه ی دسته بندی ها </a>
                                     <div class="sub-cat">
 
                                         <div class="accordion" id="accordionCat">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                                        aria-expanded="true" aria-controls="collapse1">
-                                                        علوم ارتباطات </button>
-                                                </h2>
-                                                <div id="collapse1" class="accordion-collapse collapse show"
-                                                    data-bs-parent="#accordionCat">
-                                                    <div class="accordion-body">
-                                                        <div><a href="#">فلسفه</a></div>
-                                                        <div><a href="#">تاریخ</a></div>
-                                                        <div><a href="#">فلسفه</a></div>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                                        aria-expanded="false" aria-controls="collapse2">
-                                                        علوم ارتباطات </button>
-                                                </h2>
-                                                <div id="collapse2" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionCat">
-                                                    <div class="accordion-body">
-                                                        <div><a href="#">فلسفه</a></div>
-                                                        <div><a href="#">تاریخ</a></div>
-                                                        <div><a href="#">فلسفه</a></div>
+                                            <ul id="myUL">
+                                                <li class="root active"><span class="caret caret-down">علوم
+                                                        ارتباطات</span>
+                                                    <ul class="nested active" style="display: block;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">تاریخ </span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="root"><span class="caret">علوم ارتباطات</span>
+                                                    <ul class="nested" style="display: none;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">Tea</span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                                        aria-expanded="false" aria-controls="collapse3">
-                                                        علوم ارتباطات </button>
-                                                </h2>
-                                                <div id="collapse3" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionCat">
-                                                    <div class="accordion-body">
-                                                        <div><a href="#">فلسفه</a></div>
-                                                        <div><a href="#">تاریخ</a></div>
-                                                        <div><a href="#">فلسفه</a></div>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="root"><span class="caret">علوم ارتباطات</span>
+                                                    <ul class="nested" style="display: none;">
+                                                        <li><a href="#">فلسفه</a></li>
+                                                        <li><a href="#">تاریخ</a></li>
+                                                        <li><span class="caret">Tea</span>
+                                                            <ul class="nested">
+                                                                <li><a href="#">تاریخ</a></li>
+                                                                <li><a href="#">تاریخ</a></li>
 
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                         </nav>
+
                     </div>
                 </nav>
                 <!-- End -->
@@ -256,8 +250,8 @@
         <section class="introduction">
             <div class="container">
                 <div class="row wow fadeInUp">
-                    <div class="col-md-12 col-xl-7">
-                        <div class="right">
+                    <div class=" col-md-12 col-xl-7">
+                        <div class="right me-lg-5">
                             <div class="header">
                                 <span class="tiny-title mb-2">رویکرد ما</span>
                                 <h3 class="seection-1-title">در معرفی علوم و تخصص های دانشگاهی چیست؟</h3>
@@ -324,7 +318,7 @@
 
                         </div>
                     </div>
-                    <div class="col-md-12 col-xl-5">
+                    <div class=" col-md-12 col-xl-5">
                         <div class="left">
                             <img src="assets/images/intru.png">
                         </div>
@@ -419,6 +413,11 @@
                                 <div class="col">
                                     <a class="cours-item">
                                         انسان شناسی
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="cours-more-item">
+                                        نمایش بیشتر
                                     </a>
                                 </div>
                             </div>
@@ -598,10 +597,9 @@
 
                     <div class=" col-md-6 col-lg-4 col-xl-3 collection-box wow fadeInUp">
                         <div class="collection-item">
-                            <!-- <div class="top-coll"><img src="assets/images/svg/top-coll.svg"></div> -->
                             <div class="image-box">
                                 <a href="#">
-                                    <span> محل قرارگیری نام مجموعه قرار گیرد</span>
+                                    <span>با عنوان محل قرارگیری نام مجموعه قرار گیرد</span>
                                     <img src="assets/images/book-spines-1.jpg">
                                 </a>
                             </div>
@@ -790,6 +788,27 @@
                             </figure>
                             <div class="content"><a href="#" title="">
                                     <h4 class="title">چرا علم اقتصاد در برابر نابرابری سکوت کرده است؟</h4>
+                                </a>
+                                <div class="tags">
+                                    <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>
+                                    <a class="btn btn-primary tag-btn-1" href="#" title="">داده کاوی</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="item">
+                        <div class="category">
+                            <img src="assets/images/fluent-mdl2_education.png">
+                            <span class="span ms-1">اقتصاد</span>
+                        </div>
+                        <article class="article-blog">
+                            <figure>
+                                <a href="#" title="">
+                                    <img src="assets/images/Rectangle 4070.jpg" alt="">
+                                </a>
+                            </figure>
+                            <div class="content"><a href="#" title="">
+                                    <h4 class="title">چرا 22علم اقتصاد در برابر نابرابری سکوت کرده است؟</h4>
                                 </a>
                                 <div class="tags">
                                     <a class="btn btn-primary tag-btn-1" href="#" title="">تحلیل</a>

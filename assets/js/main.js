@@ -19,6 +19,30 @@ $('nav ul li').click(function () {
     $(this).addClass("active").siblings().removeClass("active");
 });
 
+//category menu
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function () {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+    });
+}
+
+$(document).ready(function () {
+    $('.root > span').click(function () {
+        var $this = $(this);
+        $this.siblings('.nested').slideToggle();
+        $this.addClass('caret-down');
+        $this.parent().siblings('.root').children('.nested').slideUp();
+        $this.parent().siblings('.root').children('span').removeClass('caret-down');
+    });
+});
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -77,16 +101,32 @@ $(document).ready(function () {
 
 
 $('.slider-blog').slick({
-    //dots:true,
+    dots: true,
     infinite: true,
-    rtl: true, dot: true,
-
+    speed: 3000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
-    speed: 4000,
-    easing: 'linear',
+    autoplaySpeed: 2000,
+    arrows: true,
+    autoplay: true,
+
+    // dots: true,
+    // infinite: true,
+    rtl: true,
+    // dot: true,
+
+    // slidesToShow: 4,
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 0,
+    // speed: 4000,
+    // easing: 'linear',
+    // initialSlide: 1,
+    // waitForAnimate: false,
+
+    // pauseOnFocus: false,
+    // pauseOnHover: false,
     responsive: [
         {
             breakpoint: 1200,
