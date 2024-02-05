@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,7 +172,7 @@
                             <p>تلاشی در راستای معرفی نظام مند با تاکید بر تنوع دیدگاه ها</p>
                             <form action="#" class="row align-items-center justify-content-center">
                                 <div class="col-lg-5">
-                                    <select class="form-control " name="field"
+                                    <select class="form-select" name="field"
                                         placeholder="رشته مورد نظر خود را انتخاب کنید">
                                         <option value="1">فیزیک</option>
                                         <option value="2">ریاضی</option>
@@ -180,9 +180,39 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-5 pe-0">
-                                    <input class="form-control " name="text"
+                                    <!-- <input class="form-control " name="text" list="list-search" id="input-searchlist"
                                         placeholder="مطلب خود را جست و جو نمایید" />
-
+                                    <datalist id="list-search">
+                                        <option>کتاب یک</option>
+                                        <option>الف</option>
+                                        <option>پیشنهاد</option>
+                                        <option>Barnaul</option>
+                                        <option>Asia/Chita</option>
+                                        <option>Asia/Dhaka</option>
+                                        <option>Asia/Famagusta</option>
+                                        <option>Asia/Hong_Kong</option>
+                                        <option>Asia/Jayapura</option>
+                                        <option>Asia/Kuala_Lumpur</option>
+                                        <option>Asia/Jakarta</option>
+                                    </datalist> -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"
+                                            placeholder="مطلب خود را جست و جو نمایید" list="list-timezone"
+                                            id="input-search">
+                                        <datalist id="list-timezone">
+                                            <option>Asia/Aden</option>
+                                            <option>Asia/Aqtau</option>
+                                            <option>Asia/Baghdad</option>
+                                            <option>Asia/Barnaul</option>
+                                            <option>Asia/Chita</option>
+                                            <option>Asia/Dhaka</option>
+                                            <option>Asia/Famagusta</option>
+                                            <option>Asia/Hong_Kong</option>
+                                            <option>Asia/Jayapura</option>
+                                            <option>Asia/Kuala_Lumpur</option>
+                                            <option>Asia/Jakarta</option>
+                                        </datalist>
+                                    </div>
                                 </div>
                                 <div class="col-lg-2">
                                     <button class="btn btn-red" type="submit">جستجو</button>
@@ -207,7 +237,7 @@
                             <div class="row filter">
                                 <div class="col-lg-6 right">
                                     <div class="btn-modal">
-                                        <button class="btn btn-green">فیلترها</button>
+                                        <button class="btn btn-green" id="btn-filter">فیلترها</button>
                                     </div>
                                     <div class="cat-btn-modal">
 
@@ -226,39 +256,104 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="filter-item">
-                                <div class="row">
-                                    <div class="col-lg-5 type-item">
-                                        <span>نوع مطلب:</span>
-                                        <span class="close">تحلیلی
-                                            <a href="#">
-                                                <span class="fas fa-times"></span>
-                                            </a>
-                                        </span>
-                                        <span class="close">توصیفی
-                                            <a href="#">
-                                                <span class="fas fa-times"></span>
-                                            </a>
-                                        </span>
+                            <div class="filter-form">
+                                <form id="frm-filter">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <span>نوع مطلب:</span>
+                                            <div class="form-check">
+                                                <input class="form-check-input type" data-typeName="type" data-value="1"
+                                                    name="filter-item" type="checkbox" value="" id="typeChecked1"
+                                                    checked>
+                                                <label class="form-check-label" for="typeChecked1">
+                                                    تحیلی
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input type" data-typeName="type" data-value="2"
+                                                    name="filter-item" type="checkbox" value="" id="typeChecked2"
+                                                    checked>
+                                                <label class="form-check-label" for="typeChecked2">
+                                                    تحیلی
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input type" data-typeName="type" data-value="3"
+                                                    name="filter-item" type="checkbox" value="" id="typeChecked3"
+                                                    checked>
+                                                <label class="form-check-label" for="typeChecked3">
+                                                    تحیلی
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span>دسته بندی رشته ها:</span>
+                                            <div class="form-check">
+                                                <input class="form-check-input cat" data-typeName="cat"
+                                                    data-value="test1" name="filter-item" type="checkbox" value=""
+                                                    id="catChecked1" checked>
+                                                <label class="form-check-label" for="catChecked1">
+                                                    تحیلی
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input cat" data-typeName="cat"
+                                                    data-value="test2" name="filter-item" type="checkbox" value=""
+                                                    id="catChecked2" checked>
+                                                <label class="form-check-label" for="catChecked2">
+                                                    تحیلی
+                                                </label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-12 col-md-2 mt-4">
+                                            <button id="filter" type="submit" class="w-100 btn btn-red btn-filter">اعمال
+                                                فیلترها</button>
+                                        </div>
                                     </div>
-                                    <div class="col-md-7 type-item">
-                                        <span>نوع مطلب:</span>
-                                        <span class="close">جامعه شناسی
-                                            <a href="#">
-                                                <span class="fas fa-times"></span>
-                                            </a>
-                                        </span>
-                                        <span class="close">روانشناسی
-                                            <a href="#">
-                                                <span class="fas fa-times"></span>
-                                            </a>
-                                        </span>
-                                        <span class="close">روانشناسی
-                                            <a href="#">
-                                                <span class="fas fa-times"></span>
-                                            </a>
-                                        </span>
-                                        
+                                </form>
+                            </div>
+                            <div class="filtered-box">
+                                <div class="row">
+                                    <div class="col-lg-5 d-flex type-item">
+                                        <span class="title">نوع مطلب:</span>
+                                        <div id="type-box d-inline-block">
+                                            <span class="close">تحلیلی
+                                                <button data-typeName="type" data-value="1">
+                                                    <span class="fas fa-times"></span>
+                                                </button>
+                                            </span>
+                                            <span class="close">تحلیلی
+                                                <button data-typeName="type" data-value="1">
+                                                    <span class="fas fa-times"></span>
+                                                </button>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-7 d-flex type-item ">
+                                        <span class="title">نوع مطلب:</span>
+                                        <div class="cat-box d-inline-block">
+                                            <span class="close">تحلیلی
+                                                <button data-typeName="type" data-value="1">
+                                                    <span class="fas fa-times"></span>
+                                                </button>
+                                            </span>
+                                            <span class="close">تحلیلی
+                                                <button data-typeName="type" data-value="1">
+                                                    <span class="fas fa-times"></span>
+                                                </button>
+                                            </span>
+                                            <span class="close">تحلیلی
+                                                <button data-typeName="type" data-value="1">
+                                                    <span class="fas fa-times"></span>
+                                                </button>
+                                            </span>
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -553,21 +648,19 @@
     </main>
     <footer>
         <!-- if you want, remov it in other pages -->
-        <div class="questions wow fadeInDown">
+        <div class="footer-box">
             <div class="box-title">
                 <div class="content">
                     <div class="text">
-                        <h3>دوست داریم بیشتر با مخاطب سایت آشنا شویم.
-                            ممنون میشویم اگر با کلیک روی این دکمه
-                            به این چند سوال پاسخ دهید
-
-                            <a class="btn btn-red">مشاهده سوالات</a>
-                        </h3>
-
+                        <h3>آیا میدانستید؟</h3>
+                        <p>در رشته سیاست گذاری عمومی این مراحل بیانگر اقدامات جاری هستند که طی زمان به
+                            وقوع میپیوندند. هر مرحلهای به مرحله بعد مرتبط بوده و آخرین مرحله )برآورد
+                            سیاست( نیز به مرحله اول )تهیه دستور کار( و مراحل میانی متصل است که نوع این
+                            ارتباط به صورت یک چرخه یا دور غیر خطی از اقدامات است.</p>
                     </div>
 
                     <div class="book-img">
-                        <img src="assets/images/svg/tourist-reading-book.svg">
+                        <img src="assets/images/svg/doyou.svg">
                     </div>
                 </div>
             </div>
@@ -636,13 +729,51 @@
                 </div>
             </div>
         </section>
+        <div class="copyright">
+            <p>گردآوری منابع تخصصی در مجموعه ای از رشته ها به صورت یک جا،
+            </p>
+        </div>
     </footer>
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/lib/all/libraries-min.js"></script>
     <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/autocomplet/bootstrap-autocomplete.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', e => {
+            $('#input-search').autocomplete()
+        }, false);
 
+        $("#btn-filter").on("click", function () {
+            $(".filter-form").slideToggle();
+        });
 
+        $("#frm-filter").on("submit", function (e) {
+            e.preventDefault();
+            let filterItems = [];
+            let paramsItem = "";
+            $("input:checkbox[name=filter-item]:checked").each(function (index, value) {
+                filterItems.push({ typeName: $(value).attr('data-typeName'), value: $(value).attr('data-value') });
+            });
+            if (filterItems.length > 0) {
+                filterItems.forEach((item, index) => {
+                    paramsItem += `${item.typeName}=${item.value}`;
+                    if (filterItems.length > index + 1) { paramsItem += '&' };
+                })
+            }
+
+            console.log(paramsItem);
+            document.location.search = paramsItem;
+        })
+
+        $(document).ready(function () {
+            let kvp = document.location.search;
+            if (kvp.length > 0 && kvp != null) {
+
+                $(".filtered-box").slideDown();
+            }
+        });
+    </script>
 </body>
 </html>
