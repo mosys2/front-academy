@@ -684,3 +684,27 @@ $(document).ready(function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let bgDark = document.querySelector('header').classList.contains('bg-dark-color');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 90) {
+            if (bgDark) {
+                document.querySelector('.fixed-nav').classList.add('fixed-top-dark', 'fixed-top');
+            } else {
+                document.querySelector('.fixed-nav').classList.add('fixed-top');
+            }
+            // add padding top to show content behind navbar
+            navbar_height = document.querySelector('.navbar').offsetHeight;
+
+            document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+            document.querySelector('.fixed-nav').classList.remove('fixed-top');
+            // if (bgDark) {
+            //     document.querySelector('header').classList.add('bg-dark-color');
+            // }
+            // remove padding top from body
+            document.body.style.paddingTop = '0';
+        }
+    });
+}); 
