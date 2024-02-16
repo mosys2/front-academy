@@ -1702,11 +1702,11 @@ footer .copyright p {
 }
 
 .bg-banafsh {
-  background-color: #363A77;
+  background-color: #363a77;
 }
 
 .bg-greens {
-  background-color: #44E3BD;
+  background-color: #44e3bd;
 }
 
 .slider-content {
@@ -1775,12 +1775,205 @@ footer .copyright p {
   background-color: var(--color-2);
 }
 
+.modal-header .btn-close {
+  margin: initial;
+  border: 2px solid #434c5d;
+  color: #434c5d;
+  border-radius: 50%;
+}
+
+.modal-author .img-box-modal {
+  background-color: #f2fcfd;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-author .img-box-modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.modal-author .img-box-modal span {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: var(--color-4);
+  color: var(--color-5);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.modal-emission .full-box {
+  background-color: #f2fcfd;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.modal-emission .full-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.modal-emission .full-box .img-box-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-emission .full-box .img-box-text span {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: var(--color-4);
+  color: var(--color-5);
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .modal-emission .full-box .img-box-text span {
+    margin-top: 30px;
+  }
+}
+
 .text-dark {
   color: #101336;
 }
 
 .text-white {
   color: #fff !important;
+}
+
+@keyframes slideDown {
+  from {
+    height: 70px;
+    width: 70px;
+    opacity: 1;
+  }
+  to {
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+  }
+}
+.media-detail {
+  margin-bottom: 20px;
+  position: relative;
+}
+.media-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.media-detail .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(16, 19, 54, 0.7);
+  border-radius: 12px;
+}
+.media-detail .video-bg a {
+  width: 71px;
+  height: 71px;
+  background-color: var(--color-5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+.media-detail .video-bg a::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22);
+  animation: slideDown 2s infinite;
+  z-index: 1;
+}
+.media-detail .video-bg a::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22);
+  z-index: 1;
+}
+.media-detail .video-bg a span {
+  font-size: 25px;
+  color: var(--color-4);
+  z-index: 10;
+}
+.media-detail .video-bg a:hover {
+  background-color: var(--color-4);
+}
+.media-detail .video-bg a:hover span {
+  font-size: 25px;
+  color: var(--color-5);
+}
+
+.header-detail h3 {
+  font-family: var(--font-3);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.header-detail .detail {
+  padding: 20px;
+  background-color: var(--color-6);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.header-detail .detail .data-list li {
+  display: inline;
+  margin-left: 10px;
+}
+@media (max-width: 992px) {
+  .header-detail .detail .data-list li {
+    display: block;
+  }
+}
+.header-detail .detail .cat {
+  margin-top: 29px;
+}
+.header-detail .detail .cat span {
+  background-color: #ffabac;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.header-detail .detail .links {
+  display: flex;
+  justify-content: end;
+}
+.header-detail .detail .links a {
+  margin-right: 15px;
+}
+@media (max-width: 992px) {
+  .header-detail .detail .links {
+    justify-content: start;
+    margin-top: 30px;
+  }
 }
 
 .blog-box .item {
